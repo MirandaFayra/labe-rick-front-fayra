@@ -1,18 +1,23 @@
 import { BrowserRouter, Route,  Routes } from "react-router-dom";
-
 import React from 'react';
 import LoginPage from "../pages/login-page";
+import HomePage from "../pages/home-page";
+import InstructionPage from "../pages/instruction-page";
+import CharacterPage from "../pages/character-page";
+import CreateCharacterPage from "../pages/create-character-page";
+import PlanetPage from "../pages/planet-page";
+
 
 function Router(){
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<LoginPage/>} />
-                <Route path="/home" element={<LoginPage/>} />
-                <Route path="/instruction" element={<LoginPage/>} />
-                <Route path="/character" element={<LoginPage/>} />
-                <Route path="/create-character" element={<LoginPage/>} />
-                <Route path="/" element={<LoginPage/>} />
+                <Route path="/home" element={<HomePage/>} />
+                <Route path="/instruction" element={<InstructionPage/>} />
+                <Route path="/character" element={<CharacterPage/>} />
+                <Route path="/create-character" element={<CreateCharacterPage/>} />
+                <Route path="/planet" element={<PlanetPage/>} />
             </Routes>
         </BrowserRouter>
     );
