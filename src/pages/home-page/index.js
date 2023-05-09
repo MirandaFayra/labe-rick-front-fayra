@@ -1,5 +1,6 @@
 import React from 'react';
-import { PageContainer,TextContainer } from '../../styles/index';
+import { PageContainer,TextContainer,SButton } from '../../styles/index';
+import {ButtonContainer} from './styled'
 
 export default function HomePage() {
  return (
@@ -10,8 +11,10 @@ export default function HomePage() {
           <br/>
           Ajude-nos a povoar o nosso planeta!
         </p>
-        <button>Entenda o que Aconteceu</button>
-        <button>Ir para o planeta Rick</button>
+        <ButtonContainer>
+          <SButton>Entenda o que Aconteceu</SButton>
+          <SButton>Ir para o planeta Rick</SButton>
+        </ButtonContainer>
     </TextContainer>
    </PageContainer>
  );
