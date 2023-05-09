@@ -1,11 +1,11 @@
-import * as S from '../Card/styled'
+import * as S from './styled'
 
 export default function Header(){
     return(
         <S.HeaderStyle>
-            <img/>
+            <img alt='flexa para esquerda'/>
             <p>Labe Rick</p>
-            <img/>
+            <img alt='icone de casa'/>
         </S.HeaderStyle>
     )
 }
