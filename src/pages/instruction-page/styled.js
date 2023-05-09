@@ -31,6 +31,7 @@ export const TextContainer = styled.div`
     border-radius:5px;
     opacity: 0.8;
     letter-spacing: 1.5px;
+    font-size:1.19rem;
 
     span{
         font-weight:bolder;
