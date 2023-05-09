@@ -6,11 +6,13 @@ import InstructionPage from "../pages/instruction-page";
 import CharacterPage from "../pages/character-page";
 import CreateCharacterPage from "../pages/create-character-page";
 import PlanetPage from "../pages/planet-page";
+import Header from "../components/Header";
 
 
 function Router(){
     return (
         <BrowserRouter>
+            <Header/>
             <Routes>
                 <Route path="/" element={<LoginPage/>} />
                 <Route path="/home" element={<HomePage/>} />
