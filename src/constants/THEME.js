@@ -4,5 +4,5 @@ export const theme ={
         blue100: '#9ad8e6',
         blue500: '#51b8bd',
         blue800: '#141937',
-    }
+    },
 }
