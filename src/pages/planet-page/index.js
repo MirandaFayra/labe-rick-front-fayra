@@ -1,13 +1,15 @@
 import React from 'react';
 import {CountContainer} from './styled'
-import { ContainerCard } from '../../styles';
+import { ContainerCard,SButton} from '../../styles';
 import Card from '../../components/Card';
 
 export default function PlanetPage() {
  return (
   <>
   <CountContainer>
-    <p>Quantidade de Habitantes no Planeta : <span>NUMERO</span></p>
+    <SButton>Escolher Ser</SButton>
+    <p><span>NUMERO</span> - HABITANTES</p>
+    <SButton>Criar novo Ser</SButton>
   </CountContainer>
   <ContainerCard>
       <Card/>
