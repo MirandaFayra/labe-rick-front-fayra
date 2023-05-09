@@ -1,14 +1,18 @@
 import * as S from './styled'
 import Arrow  from '../../assets/leftArrow.svg'
 import Rocket from '../../assets/rocket.svg'
+import { useNavigate } from 'react-router-dom'
+import {goBack, goToHome} from '../../routes/coordinator'
 
 export default function Header(){
+    const navigate = useNavigate()
+
     return(
         <S.HeaderContainer>
         <S.HeaderStyle>
-            <img src={Arrow} alt='flexa para esquerda'/>
+            <img onClick={()=>goBack(navigate)} src={Arrow} alt='flexa para esquerda'/>
             <p>Labe Rick</p>
-            <img src={Rocket} alt='icone de casa'/>
+            <img onClick={()=>goToHome(navigate)}src={Rocket} alt='icone de casa'/>
         </S.HeaderStyle>
         </S.HeaderContainer>
     )
