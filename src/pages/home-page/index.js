@@ -1,9 +1,12 @@
 import React from 'react';
+import { PageContainer,TextContainer } from '../../styles/index';
 
 export default function HomePage() {
  return (
-   <p>
-    Home Page
-   </p>
+  <PageContainer>
+    <TextContainer>
+   
+    </TextContainer>
+   </PageContainer>
  );
 }

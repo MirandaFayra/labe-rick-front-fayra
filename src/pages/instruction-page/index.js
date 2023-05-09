@@ -1,5 +1,5 @@
 import React from 'react';
-import {PageContainer,TextContainer} from './styled'
+import {PageContainer,TextContainer} from '../../styles/index'
 
 export default function InstructionPage() {
  return (
