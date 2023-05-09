@@ -6,6 +6,7 @@ export const ContainerSelect =styled.div `
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
+    background-color:${theme.colors.blue100}
 
 `
 
