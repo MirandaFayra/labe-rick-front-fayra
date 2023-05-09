@@ -6,3 +6,5 @@ export const theme ={
         blue800: '#141937',
     },
 }
+
+export default theme
