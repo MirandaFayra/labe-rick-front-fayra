@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import theme from '../../constants/THEME';
+
+export const ContainerSelect =styled.div `
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+
+`
 
 export const ContainerCard = styled.div`
     margin-top:12vh;
@@ -10,5 +19,5 @@ export const ContainerCard = styled.div`
     justify-items:center;
     row-gap: 16vh;
     grid-auto-flow: row;
-
 `;
+

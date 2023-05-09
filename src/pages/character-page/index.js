@@ -1,12 +1,17 @@
 import React from 'react';
 import Card from '../../components/Card';
-import {ContainerCard} from './styled'
+import {ContainerCard,ContainerSelect} from './styled'
+import InputSelect from '../../components/InputSelect';
+import {SButton} from '../../styles/index'
 
 export default function CharacterPage() {
 
     return (
         <> 
-            <input></input> 
+            <ContainerSelect>
+                <InputSelect/>
+                <SButton>Selecionar Personagem</SButton>
+            </ContainerSelect>
             <ContainerCard>
                 <Card/>
                 <Card/>
