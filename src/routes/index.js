@@ -7,6 +7,7 @@ import CharacterPage from "../pages/character-page";
 import CreateCharacterPage from "../pages/create-character-page";
 import PlanetPage from "../pages/planet-page";
 import Header from "../components/Header";
+import ConfirmationPage from "../pages/confirmation-page";
 
 
 function Router(){
@@ -20,6 +21,7 @@ function Router(){
                 <Route path="/character" element={<CharacterPage/>} />
                 <Route path="/create-character" element={<CreateCharacterPage/>} />
                 <Route path="/planet" element={<PlanetPage/>} />
+                <Route path="/confirmation" element={<ConfirmationPage/>} />
             </Routes>
         </BrowserRouter>
     );
