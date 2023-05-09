@@ -1,10 +1,15 @@
 import React from 'react';
 import { PageContainer,TextContainer,SButton} from '../../styles/index';
 import {ButtonContainer,TitleContainer} from './styled'
+import space from '../../assets/backgrounds/space-background.png'
+import useProtectedPage from '../../hooks/useProtectedPage';
 
 export default function HomePage() {
+  useProtectedPage();
+
+
  return (
-  <PageContainer>
+  <PageContainer image={space}>
     <TextContainer>
       <TitleContainer>Boas Vindas, NOME!</TitleContainer>
         <p>Bem Vinde ao planeta Rick! <br/>

@@ -1,6 +1,6 @@
 import * as S from './styled'
-import Arrow  from '../../assets/leftArrow.svg'
-import Rocket from '../../assets/rocket.svg'
+import Arrow  from '../../assets/icons/leftArrow.svg'
+import Rocket from '../../assets/icons/rocket.svg'
 import { useNavigate } from 'react-router-dom'
 import {goBack, goToHome} from '../../routes/coordinator'
 
