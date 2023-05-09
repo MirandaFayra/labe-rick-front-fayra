@@ -1,5 +1,6 @@
 import React from 'react';
-import * as S from './styled';
+import * as S from '../../styles/index'
+import * as J from './styled'
 import { useForm } from '../../hooks/useForm';
 import axios from 'axios';
 import { BASE_URL } from '../../constants/BASE_URL';
@@ -31,7 +32,7 @@ export default function LoginPage() {
         <S.SInput id='email' name='email' value={form.emai} onChange={(e)=>onChange(e)} />
         <S.SLabel htmlFor='password'>Password</S.SLabel>
         <S.SInput type='password' id='password' name='password' value={form.password} onChange={(e)=>onChange(e)} />
-        <S.SLink href='http://google.com'>Inscreva-se</S.SLink>
+        <J.SLink href='http://google.com'>Inscreva-se</J.SLink>
         <S.SButton>Entrar em Orbita</S.SButton> 
       </S.SForm>
    </S.Container>
