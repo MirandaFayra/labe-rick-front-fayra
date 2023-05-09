@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from '../../components/Card';
-import {ContainerCard,ContainerSelect} from './styled'
+import {ContainerSelect} from './styled'
 import InputSelect from '../../components/InputSelect';
-import {SButton} from '../../styles/index'
+import {SButton,ContainerCard} from '../../styles/index'
 
 export default function CharacterPage() {
 
