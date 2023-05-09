@@ -1,12 +1,12 @@
 import React from 'react';
-import { PageContainer,TextContainer,SButton } from '../../styles/index';
-import {ButtonContainer} from './styled'
+import { PageContainer,TextContainer,SButton} from '../../styles/index';
+import {ButtonContainer,TitleContainer} from './styled'
 
 export default function HomePage() {
  return (
   <PageContainer>
     <TextContainer>
-      <h2>Boas Vindas, NOME</h2>
+      <TitleContainer>Boas Vindas, NOME!</TitleContainer>
         <p>Bem Vinde ao planeta Rick! <br/>
           <br/>
           Ajude-nos a povoar o nosso planeta!

@@ -28,6 +28,7 @@ export const TextContainer = styled.div`
     background:${theme.colors.blue100};
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 2rem;
     border-radius:5px;
     opacity: 0.87;
