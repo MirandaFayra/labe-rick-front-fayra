@@ -1,9 +1,10 @@
 import React from 'react';
+import {PageContainer} from './styled'
 
 export default function InstructionPage() {
  return (
-   <p>
+   <PageContainer>
     InstructionPage
-   </p>
+   </PageContainer>
  );
 }
