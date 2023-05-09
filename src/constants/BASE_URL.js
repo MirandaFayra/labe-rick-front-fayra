@@ -1,1 +1,1 @@
-export const BASE_URL='https://labe-rick.onrender.com/'
+export const BASE_URL='https://labe-rick.onrender.com'
