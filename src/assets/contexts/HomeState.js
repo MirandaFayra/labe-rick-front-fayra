@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { HomeContext } from './HomeContext';
+import { useRequestData } from '../../hooks/useRequestData';
 
 export default function HomeState({children}) {
+    
+    const {data}=useRequestData({},'/user/get=user')
     const [citizen,setCitizen]=useState([]);
 
-    const data={
+    const dataContext={
         citizen,
-        setCitizen
+        setCitizen,
+        user:data
     }
 
  return (
-   <HomeContext.Provider value={data}>
+   <HomeContext.Provider value={dataContext}>
         {children}
    </HomeContext.Provider>
  );
