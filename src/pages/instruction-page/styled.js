@@ -30,6 +30,7 @@ export const TextContainer = styled.div`
     padding: 2rem;
     border-radius:5px;
     opacity: 0.8;
+    letter-spacing: 1.5px;
 
     span{
         font-weight:bolder;
