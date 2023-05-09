@@ -1,9 +1,17 @@
 import React from 'react';
+import Card from '../../components/Card';
 
 export default function CharacterPage() {
+
     return (
-        <>
-            <p>Character</p>
+        <>  
+            <p>CharacterPage</p>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
         </>
     );
 }
