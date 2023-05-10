@@ -14,7 +14,7 @@ function Router(){
         <BrowserRouter>
             <Header/>
             <Routes>
-                <Route path="/home" element={<HomePage/>} />
+                <Route path="/" element={<HomePage/>} />
                 <Route path="/instruction" element={<InstructionPage/>} />
                 <Route path="/character" element={<CharacterPage/>} />
                 <Route path="/create-character" element={<CreateCharacterPage/>} />

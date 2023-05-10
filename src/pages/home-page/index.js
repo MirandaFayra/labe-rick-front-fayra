@@ -1,11 +1,13 @@
-import React from 'react';
-import { PageContainer,TextContainer,SButton} from '../../styles/index';
-import {ButtonContainer,TitleContainer} from './styled'
-import space from '../../assets/backgrounds/space-background.png'
-import Login from '../Login';
+import React, { useContext } from 'react';
+import Login from '../../components/Login';
+import { GlobalContext } from '../../contexts/GlobalContext';
+import WellCome from '../../components/WellCome';
 
 export default function HomePage() {
- return ( 
-  <Login/>
- );
+  const { user } = useContext(GlobalContext);
+  return (<>
+    {!user && <Login />}
+    {user && <WellCome/>}
+  </>
+  );
 }

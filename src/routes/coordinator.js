@@ -1,7 +1,7 @@
 
 
 export const goToHome=(navigate)=>{
-    navigate('/home')
+    navigate('/')
 }
 
 export const goToInstruction=(navigate)=>{

@@ -1,12 +1,11 @@
 import {CardContainer} from './styled'
-import Banana from '../../assets/banana.jpeg'
 
-export default function Card(){
+export default function Card({id,name,image,species,selected,setSelected}){
     return(
-        <CardContainer>
-            <img src={Banana}/>
-            <p>Bananinha</p>
-            <p>Fruta</p>
+        <CardContainer selected={selected} id={id} onClick={()=>setSelected(id)}>
+            <img src={image}/>
+            <p>{name}</p>
+            <p>{species}</p>
         </CardContainer>
     )
 

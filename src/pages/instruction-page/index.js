@@ -1,8 +1,10 @@
 import React from 'react';
 import {PageContainer,TextContainer} from '../../styles/index'
+import useProtectedPage from '../../hooks/useProtectedPage';
 
 export default function InstructionPage() {
- return (
+  useProtectedPage();
+  return (
    <PageContainer>
     <TextContainer>
       <p>

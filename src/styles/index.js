@@ -111,12 +111,12 @@ export const SInput = styled.input`
     padding: 0.7vw 1vw;
     margin-top:1vw;
     margin-bottom:1vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     text-align: center;
     font-size: 1.2vw;
     background-color: ${theme.colors.white};
     color: ${theme.colors.brown};
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
     border: none;
     outline: none;
     border-radius: 6px;
@@ -132,6 +132,20 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-
+export const InputSelectStyle = styled.select`
+    width: 70%;
+    padding: 0.7vw 1vw;
+    margin-top:1vw;
+    margin-bottom:1vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2vw;
+    
+    border-radius:50px;
+    border: 1px solid ${theme.colors.green};
+    color: ${theme.colors.blue800};
+    text-align: center;
+`
 
 
