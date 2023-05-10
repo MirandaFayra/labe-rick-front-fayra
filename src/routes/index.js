@@ -1,6 +1,5 @@
 import { BrowserRouter, Route,  Routes } from "react-router-dom";
 import React from 'react';
-import LoginPage from "../pages/login-page";
 import HomePage from "../pages/home-page";
 import InstructionPage from "../pages/instruction-page";
 import CharacterPage from "../pages/character-page";
@@ -15,7 +14,6 @@ function Router(){
         <BrowserRouter>
             <Header/>
             <Routes>
-                <Route path="/" element={<LoginPage/>} />
                 <Route path="/home" element={<HomePage/>} />
                 <Route path="/instruction" element={<InstructionPage/>} />
                 <Route path="/character" element={<CharacterPage/>} />

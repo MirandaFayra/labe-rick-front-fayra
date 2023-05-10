@@ -1,6 +1,4 @@
-export const goToLogin=(navigate)=>{
-    navigate('/')
-}
+
 
 export const goToHome=(navigate)=>{
     navigate('/home')

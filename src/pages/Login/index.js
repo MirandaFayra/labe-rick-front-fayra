@@ -7,7 +7,7 @@ import { BASE_URL } from '../../constants/BASE_URL';
 import { goToHome } from '../../routes/coordinator';
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginPage() {
+export default function Login() {
   const [form,onChange]=useForm({email:'', password:''})
   const navigate= useNavigate()
   
@@ -35,13 +35,8 @@ export default function LoginPage() {
         <S.SLabel htmlFor='email'>E-mail</S.SLabel>
         <S.SInput required id='email' name='email' type='email' value={form.emai} onChange={(e)=>onChange(e)} />
         <S.SLabel htmlFor='password'>Password</S.SLabel>
-<<<<<<< HEAD
-        <S.SInput required type='password' id='password' name='password' value={form.password} onChange={(e)=>onChange(e)} />
-        <S.SLink href='http://google.com'>Inscreva-se</S.SLink>
-=======
         <S.SInput type='password' id='password' name='password' value={form.password} onChange={(e)=>onChange(e)} />
         <J.SLink href='http://google.com'>Inscreva-se</J.SLink>
->>>>>>> 070d6669ded16f3b8c955554490f73421b860ac1
         <S.SButton>Entrar em Orbita</S.SButton> 
       </S.SForm>
    </S.Container>
