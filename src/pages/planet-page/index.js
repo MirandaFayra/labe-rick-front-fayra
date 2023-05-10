@@ -14,6 +14,8 @@ export default function PlanetPage() {
   const navigate = useNavigate()
 
   const { citizens } = useContext(GlobalContext);
+
+  //console.log({citizens});
   return (
     <>
       <CountContainer>

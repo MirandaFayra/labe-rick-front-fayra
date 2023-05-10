@@ -24,10 +24,10 @@ export default function Login() {
     }
 
     axios.post(`${BASE_URL}/user/login`,body).then((res)=>{
-        // console.log(res.data);
+        // //console.log(res.data);
         const token=res.data.token
         localStorage.setItem('token',token)
-        //pega user
+         //pega user
         const headers = {
           headers: {
             Authorization: token
@@ -36,10 +36,11 @@ export default function Login() {
         axios.get(`${BASE_URL}/user/get-user`, headers).then((res) => {
               setUser(res.data)
         }).catch((err) => { 
-          console.log({err});
+          //console.log({err});
         })
     }).catch((e)=>{
-     console.log(e.response); })
+     console.log(e.response); 
+    })
   }
 
  return (
@@ -50,8 +51,8 @@ export default function Login() {
         <GS.SInput required id='email' name='email' type='email' value={form.emai} onChange={(e)=>onChange(e)} />
         <GS.SLabel htmlFor='password'>Password</GS.SLabel>
         <GS.SInput type='password' id='password' name='password' value={form.password} onChange={(e)=>onChange(e)} />
-        <S.SLink href='http://google.com'>Inscreva-se</S.SLink>
-        <GS.SButton>Entrar em Orbita</GS.SButton> 
+        <S.SLink href='https://singup-labe-rick.vercel.app/' target="_blank">Inscreva-se</S.SLink>
+        <GS.SButton >Entrar em Orbita</GS.SButton> 
       </GS.SForm>
    </GS.Container>
  );

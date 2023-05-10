@@ -13,12 +13,7 @@ export const PageContainer = styled.div`
     justify-content: space-around;
     
 
-    @media (max-width: 1015px) {
-        background: url(${(image)=>image});
-        background-repeat: no-repeat;
-        background-size: auto;
-    }
-
+   
 `
 
 export const TextContainer = styled.div`

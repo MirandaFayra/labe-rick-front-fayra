@@ -11,7 +11,7 @@ export default function CreateCharacterPage() {
   const navigate =useNavigate();
   
   //função submit
-  console.log(form);
+  //console.log(form);
   const enviar = (e) => {
     e.preventDefault();
     const token = window.localStorage.getItem("token")
@@ -25,10 +25,10 @@ export default function CreateCharacterPage() {
       }
     
     axios.post(`${BASE_URL}/character/create`, body, {headers}).then((res) => {
-      // console.log(res.data);
+      // //console.log(res.data);
       goToPlanet(navigate)
     }).catch((e) => {
-      console.log(e.response);
+      //console.log(e.response);
     })
   }
 

@@ -10,12 +10,14 @@ import { goToPlanet } from '../../routes/coordinator';
 
 export default function CharacterPage() {
     useProtectedPage();
-    const navigate=useNavigate()
+    const navigate=useNavigate();
 
     const [selected, setSelected] = useState(false);
     const [selectedSpecies, setSelectedSpecies] = useState('Human');
 
     const context = useContext(GlobalContext);
+    
+    console.log(context.characte);
     //citizens
     const selectCitizen =()=>{
         const characterSelect=context.characters.find((character)=>character.id===selected);
@@ -32,8 +34,8 @@ export default function CharacterPage() {
             <ContainerCard>
                 {context.isLoadingCharacters && <p> carregando...</p>}
                 {context.characters && context.characters.filter((character) => {
-                    console.log({ character });
-                    console.log({ selectedSpecies });
+                    //console.log({ character });
+                    //console.log({ selectedSpecies });
                     return character.species === selectedSpecies;
                 })
                     .map((character) => {
