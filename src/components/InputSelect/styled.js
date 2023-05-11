@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../constants/THEME";
 
-export const InputSelectStyle = styled.select`
+export const StyledInputSelectStyle = styled.select`
     width: 20vw;
     border: 1px solid ${theme.colors.green};
     border-radius:50px;

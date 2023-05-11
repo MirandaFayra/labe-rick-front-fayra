@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { PageContainer,TextContainer,SButton} from '../../styles/index';
-import {ButtonContainer,TitleContainer} from './styled'
+import * as GS from '../../styles';
+import * as LS from './styled'
 import space from '../../assets/backgrounds/space-background.png'
 import useProtectedPage from '../../hooks/useProtectedPage';
 import { GlobalContext } from '../../contexts/GlobalContext';
@@ -12,18 +12,18 @@ export default function WellCome() {
   const {user}=useContext(GlobalContext)
   const navigate=useNavigate();
   return ( 
-  <PageContainer image={space}>
-    <TextContainer>
-      <TitleContainer>Boas Vindas, {user.name}!</TitleContainer>
+  <GS.StyledPageContainer image={space}>
+    <GS.StyledTextContainer>
+      <LS.StyledTitleContainer>Boas Vindas, {user.name}!</LS.StyledTitleContainer>
         <p>Bem Vinde ao planeta Rick! <br/>
           <br/>
           Ajude-nos a povoar o nosso planeta!
         </p>
-        <ButtonContainer>
-          <SButton onClick={()=>goToInstruction(navigate)}>Entenda o que Aconteceu</SButton>
-          <SButton onClick={()=>goToPlanet(navigate)}>Ir para o planeta Rick</SButton>
-        </ButtonContainer>
-    </TextContainer>
-   </PageContainer>
+        <LS.StyledButtonContainer>
+          <GS.StyledButton onClick={()=>goToInstruction(navigate)}>Entenda o que Aconteceu</GS.StyledButton>
+          <GS.StyledButton onClick={()=>goToPlanet(navigate)}>Ir para o planeta Rick</GS.StyledButton>
+        </LS.StyledButtonContainer>
+    </GS.StyledTextContainer>
+   </GS.StyledPageContainer>
  );
 }

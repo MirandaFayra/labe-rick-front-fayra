@@ -1,4 +1,4 @@
-import {InputSelectStyle} from './styled'
+import {StyledInputSelectStyle} from './styled'
 
 export default function InputSelect({selectedSpecies,setSelectedSpecies}){
     const handleSelectedSpecies = (event) => {
@@ -6,11 +6,11 @@ export default function InputSelect({selectedSpecies,setSelectedSpecies}){
       }
     return(
         <>
-                <InputSelectStyle value={selectedSpecies} onChange={handleSelectedSpecies} >
+                <StyledInputSelectStyle value={selectedSpecies} onChange={handleSelectedSpecies} >
                     <option value="Human">HUMAN</option>
                     <option value="Alien">ALIEN</option>
                     <option value="Diseas">DISEAS</option>
-                </InputSelectStyle>
+                </StyledInputSelectStyle>
         </>
     )
 }

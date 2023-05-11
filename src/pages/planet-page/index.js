@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../../components/Card';
 import { CountContainer } from './styled'
-import { ContainerCard, SButton } from '../../styles';
+import { StyledContainerCard, SButton } from '../../styles';
 import { goToCharacter, goToCreateCharacter } from '../../routes/coordinator';
 import useProtectedPage from '../../hooks/useProtectedPage';
 import { GlobalContext } from '../../contexts/GlobalContext';
@@ -23,7 +23,7 @@ export default function PlanetPage() {
         <p><span>{citizens.length}</span> - HABITANTES</p>
         <SButton onClick={() => goToCreateCharacter(navigate)}>Criar novo Ser</SButton>
       </CountContainer>
-      <ContainerCard>
+      <StyledContainerCard>
         {citizens.map((citizen) => {
           return <Card
                 key={citizen.id}
@@ -33,7 +33,7 @@ export default function PlanetPage() {
                 species={citizen.species}
            />
         })}
-      </ContainerCard>
+      </StyledContainerCard>
     </>
   );
 }

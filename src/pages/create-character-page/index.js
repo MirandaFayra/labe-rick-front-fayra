@@ -1,15 +1,20 @@
-import React from 'react';
-import * as S from '../../styles/index'
+import React, { useContext } from 'react';
+import * as LS from './styled'
+import * as GS from '../../styles/index'
+
 import { useForm } from '../../hooks/useForm';
 import axios from 'axios';
 import { BASE_URL } from '../../constants/BASE_URL';
 import { goToPlanet } from '../../routes/coordinator';
 import { useNavigate } from 'react-router-dom';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 export default function CreateCharacterPage() {
   const [form, onChange] = useForm({ name: '', species: '', image: '' })
   const navigate =useNavigate();
   
+  const {receiveDataCharacters}=useContext(GlobalContext)
+
   //função submit
   //console.log(form);
   const enviar = (e) => {
@@ -26,29 +31,33 @@ export default function CreateCharacterPage() {
     
     axios.post(`${BASE_URL}/character/create`, body, {headers}).then((res) => {
       // //console.log(res.data);
+      receiveDataCharacters();
+      alert(res.data.message);
       goToPlanet(navigate)
     }).catch((e) => {
+
+      alert(e.response.message);
       //console.log(e.response);
     })
   }
 
   return (
-    <S.Container>
-      <S.SForm onSubmit={enviar}>
-        <S.STitle>Indentifique-se para entrar no planeta Rick!</S.STitle>
-        <S.SLabel htmlFor='name'>Nome do Personagem</S.SLabel>
-        <S.SInput required id='name' name='name' value={form.name} onChange={(e)=>onChange(e)} />
-        <S.SLabel htmlFor='species'>Espécie do Personagem</S.SLabel>
-        <S.InputSelectStyle name='species' value={form.species} onChange={(e)=>onChange(e)} >
+    <LS.StyledContainer>
+      <GS.StyledForm onSubmit={enviar}>
+        <GS.StyledTitle>Indentifique-se para entrar no planeta Rick!</GS.StyledTitle>
+        <GS.StyledLabel htmlFor='name'>Nome do Personagem</GS.StyledLabel>
+        <GS.StyledInput required id='name' name='name' value={form.name} onChange={(e)=>onChange(e)} />
+        <GS.StyledLabel htmlFor='species'>Espécie do Personagem</GS.StyledLabel>
+        <GS.StyledInputSelectStyle name='species' value={form.species} onChange={(e)=>onChange(e)} >
           <option value="">Selecione a espécie</option>
           <option value="Human">HUMAN</option>
           <option value="Alien">ALIEN</option>
           <option value="Diseas">DISEAS</option>
-        </S.InputSelectStyle>
-        <S.SLabel htmlFor='image'>Image</S.SLabel>
-        <S.SInput required id='image' name='image' value={form.image} onChange={(e)=>onChange(e)} />
-        <S.SButton>Criar Personagem</S.SButton>
-      </S.SForm>
-    </S.Container>
+        </GS.StyledInputSelectStyle>
+        <GS.StyledLabel htmlFor='image'>Image</GS.StyledLabel>
+        <GS.StyledInput required id='image' name='image' value={form.image} onChange={(e)=>onChange(e)} />
+        <GS.StyledButton>Criar Personagem</GS.StyledButton>
+      </GS.StyledForm>
+    </LS.StyledContainer>
   );
 }

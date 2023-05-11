@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import Card from '../../components/Card';
 import { ContainerSelect } from './styled'
 import InputSelect from '../../components/InputSelect';
-import { SButton, ContainerCard } from '../../styles/index'
+import { SButton, StyledContainerCard } from '../../styles/index'
 import { GlobalContext } from '../../contexts/GlobalContext';
 import useProtectedPage from '../../hooks/useProtectedPage';
 import { useNavigate } from 'react-router-dom';
@@ -31,7 +31,7 @@ export default function CharacterPage() {
                 {selected &&
                     <SButton onClick={selectCitizen} >Selecionar Personagem</SButton>}
             </ContainerSelect>
-            <ContainerCard>
+            <StyledContainerCard>
                 {context.isLoadingCharacters && <p> carregando...</p>}
                 {context.characters && context.characters.filter((character) => {
                     //console.log({ character });
@@ -49,7 +49,7 @@ export default function CharacterPage() {
                             species={character.species}
                         />
                     })}
-            </ContainerCard>
+            </StyledContainerCard>
         </>
     );
 }
